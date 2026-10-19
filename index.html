@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abdul Warith Salman — revenue pipeline for MarTech</title>
+<title>Abdul Warith Salman, revenue pipeline for MarTech</title>
 <meta name="description" content="I build revenue pipeline for MarTech companies that target ecommerce, D2C and consumer brands. I already email the buyer you sell to.">
-<meta property="og:title" content="Abdul Warith Salman — revenue pipeline for MarTech">
+<meta property="og:title" content="Abdul Warith Salman, revenue pipeline for MarTech">
 <meta property="og:description" content="I build revenue pipeline for MarTech companies that target ecommerce, D2C and consumer brands.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
@@ -18,8 +18,9 @@
     <nav>
       <a href="#blazi">Blazi</a>
       <a href="#system" class="hide-sm">System</a>
-      <a href="#michael">Transfer</a>
-      <a href="#contact">Contact</a>
+      <a href="#michael" class="hide-sm">Transfer</a>
+      <a href="#plan">Free plan</a>
+      <a href="#contact" class="hide-sm">Contact</a>
     </nav>
   </div>
 </header>
@@ -35,9 +36,11 @@
   buyer you are trying to sell to. I know what gets answered by that person,
   because I do it at volume and measure what comes back.</p>
   <div class="cta">
-    <a class="btn p" href="#blazi">See the work →</a>
-    <a class="btn s" href="https://calendly.com/abdulwarithsalman/30min" target="_blank" rel="noopener">Book 30 minutes</a>
+    <a class="btn p" href="#plan">Get a free GTM plan →</a>
+    <a class="btn s" href="#blazi">See the work</a>
   </div>
+  <p class="cta-sub">Your website and your offer in, a written plan back inside
+  24 hours. No call needed to get it.</p>
 
   <div class="stats">
     <div><b>20+</b><span>clients closed in a quarter</span></div>
@@ -336,6 +339,69 @@
 </section>
 
 <!-- ============================================================ contact -->
+<!-- ============================================================ plan -->
+<section id="plan">
+  <div class="wrap">
+    <p class="eyebrow">Free, and specific</p>
+    <h2>Send me your offer. I will send back the plan I would run for it.</h2>
+    <p class="lead">Give me your website and what you sell. Within 24 hours you
+    get a written GTM plan for that one offer, built the same way I build one
+    for a client who is paying me.</p>
+    <p class="lead">Not an audit, and not a page of best practices. A plan with
+    real company names in it.</p>
+
+    <div class="steps">
+      <div class="step"><div><h4>The segment worth your money</h4><p>Which
+      slice of ecommerce and consumer brands actually fits this offer, and the
+      evidence I would qualify them on. A filter you can run, not a
+      persona.</p></div></div>
+      <div class="step"><div><h4>Where the list comes from</h4><p>The source I
+      would pull it from and roughly how many companies are reachable there
+      right now, so the plan has a ceiling you can see before you fund
+      it.</p></div></div>
+      <div class="step"><div><h4>The angle, per segment</h4><p>What the first
+      line opens on for each group, and why that one instead of the obvious
+      one.</p></div></div>
+      <div class="step"><div><h4>One real email</h4><p>Written to a real
+      company off that list, named, built on a specific data point about them.
+      You judge the copy on an actual example rather than on my description of
+      it.</p></div></div>
+      <div class="step"><div><h4>The arithmetic</h4><p>What reply rate it takes
+      to reach the meeting number you want, at your list size. You can tell
+      from that one page whether the channel is worth funding at
+      all.</p></div></div>
+    </div>
+
+    <p class="gate">Why it costs nothing. Reading how I think about your market
+    is faster than me claiming I understand it, and if I have your buyer wrong
+    you will see it on the first page having spent nothing to find out. I take
+    three of these a week, which is how the 24 hours stays true.</p>
+
+    <form class="pform" id="planform">
+      <div class="pf-grid">
+        <label>Your website
+          <input type="url" name="website" required
+                 placeholder="https://yourcompany.com">
+        </label>
+        <label>Where to send the plan
+          <input type="email" name="email" required
+                 placeholder="you@yourcompany.com">
+        </label>
+      </div>
+      <label>What you sell, and who buys it
+        <textarea name="offer" rows="4" required
+          placeholder="The product, roughly what it costs, and the kind of company that pays for it. Two or three lines is plenty."></textarea>
+      </label>
+      <div class="pf-foot">
+        <button class="btn p" type="submit">Send it to me</button>
+        <p class="pf-note">No call required to receive it. Your details go
+        nowhere else, and I do not sell lists.</p>
+      </div>
+      <p class="pf-msg" id="planmsg" hidden></p>
+    </form>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <p class="eyebrow">Contact</p>
@@ -344,12 +410,18 @@
     honestly whether I can help. If I cannot, I will say that too. Or put
     thirty minutes in the calendar below and we can do it live.</p>
 
-    <div style="margin:40px 0 0">
+    <div class="me">
+      <img src="img/abdul.jpg" alt="Abdul Warith Salman"
+           onerror="this.parentNode.remove()">
+      <div><b>Abdul Warith Salman</b>
+      <span>GTM engineer. You deal with me, not an account manager.</span></div>
+    </div>
+
+    <div style="margin:34px 0 0">
       <a class="big-link" href="mailto:abdulwarithsalman15@gmail.com">abdulwarithsalman15@gmail.com</a>
     </div>
 
     <div class="rows">
-      <div class="r"><b>Name</b><span>Abdul Warith Salman</span><em>GTM engineer</em></div>
       <a href="mailto:abdulwarithsalman15@gmail.com">
         <b>Email</b><span>abdulwarithsalman15@gmail.com</span><em>fastest</em></a>
       <a href="https://calendly.com/abdulwarithsalman/30min" target="_blank" rel="noopener">
@@ -363,11 +435,63 @@
 
 <footer>
   <div class="wrap">
-    <p>Abdul Warith Salman — revenue pipeline for MarTech. Available on contract.</p>
+    <p>Abdul Warith Salman, revenue pipeline for MarTech. Available on contract.</p>
     <p style="margin-left:auto">Client names redacted throughout. They did not
     sign up to appear here.</p>
   </div>
 </footer>
+
+<script>
+/* GitHub Pages serves static files only, so the submission has to POST to a
+   third party. Paste the Formspree form id below once the account exists.
+   Until it is set the button opens a prefilled email instead, so nothing is
+   silently dropped by a dead button. */
+var PLAN_ENDPOINT = "";   /* e.g. "https://formspree.io/f/abcdwxyz" */
+
+(function () {
+  var f = document.getElementById("planform");
+  if (!f) return;
+  var msg = document.getElementById("planmsg");
+  var btn = f.querySelector("button");
+
+  function say(text, ok) {
+    msg.textContent = text;
+    msg.className = "pf-msg " + (ok ? "ok" : "bad");
+    msg.hidden = false;
+  }
+
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = new FormData(f);
+    var site = d.get("website"), mail = d.get("email"), offer = d.get("offer");
+
+    if (!PLAN_ENDPOINT) {
+      window.location.href = "mailto:abdulwarithsalman15@gmail.com"
+        + "?subject=" + encodeURIComponent("GTM plan request: " + site)
+        + "&body=" + encodeURIComponent(
+            "Website: " + site + "\nReply to: " + mail
+            + "\n\nWhat they sell:\n" + offer + "\n");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending";
+    fetch(PLAN_ENDPOINT, {
+      method: "POST", body: d, headers: { "Accept": "application/json" }
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      f.reset();
+      say("Got it. The plan comes to " + mail + " inside 24 hours.", true);
+    }).catch(function () {
+      say("That did not send. Email abdulwarithsalman15@gmail.com directly and "
+          + "I will pick it up from there.", false);
+    }).then(function () {
+      btn.disabled = false;
+      btn.textContent = "Send it to me";
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

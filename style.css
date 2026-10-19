@@ -90,8 +90,8 @@ p.lead + p.lead { margin-top: 12px; }
 
 /* ------------------------------------------------------------- cards */
 .cards { display: grid; gap: 16px; margin-top: 32px; }
-.c3 { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
-.c2 { grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+.c3 { grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
+.c2 { grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr)); }
 .card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 15px;
         padding: 24px; transition: border-color .2s; }
 .card:hover { border-color: #33353b; }
@@ -106,7 +106,7 @@ figure img { width: 100%; display: block; border: 1px solid var(--line);
 figcaption { font-size: 13.5px; color: var(--dim); padding-top: 10px; line-height: 1.5; }
 figcaption b { color: var(--text); font-weight: 600; }
 .shots { display: grid; gap: 22px; margin-top: 30px; }
-.shots.two { grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+.shots.two { grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr)); }
 .shots figure { margin: 0; }
 .redacted { font-family: var(--mono); font-size: 11px; color: var(--dim);
             border: 1px solid var(--line); border-radius: 999px;
@@ -167,6 +167,45 @@ footer p { font-size: 13.5px; color: var(--dim); }
   .rows b { min-width: 78px; }
 }
 
+
+/* ------------------------------------------------------------- free plan */
+.cta-sub { font-size: 14px; color: var(--dim); margin-top: 14px; max-width: 460px; }
+
+.gate { margin-top: 28px; font-size: 14.5px; color: var(--dim); max-width: 620px;
+        border-left: 3px solid var(--accent-d); padding-left: 18px; line-height: 1.6; }
+
+.pform { margin-top: 34px; max-width: 760px; }
+.pf-grid { display: grid; gap: 16px;
+           grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); }
+.pf-grid + label { display: block; margin-top: 16px; }
+.pform label { display: block; font-family: var(--mono); font-size: 12.5px;
+               letter-spacing: .04em; text-transform: uppercase; color: var(--dim); }
+.pform input, .pform textarea {
+  display: block; width: 100%; margin-top: 8px; padding: 13px 15px;
+  background: var(--bg-2); color: var(--text);
+  border: 1px solid var(--line); border-radius: 11px;
+  font-family: var(--sans); font-size: 15px; line-height: 1.55;
+  text-transform: none; letter-spacing: normal; transition: border-color .18s;
+}
+.pform textarea { resize: vertical; min-height: 108px; }
+.pform input:focus, .pform textarea:focus { outline: none; border-color: var(--accent-d); }
+.pform input::placeholder, .pform textarea::placeholder { color: #5d5f67; }
+.pf-foot { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+.pform button { cursor: pointer; font-family: var(--sans); }
+.pform button[disabled] { opacity: .55; cursor: default; }
+.pf-note { font-size: 12.5px; color: var(--dim); max-width: 320px; line-height: 1.5; }
+.pf-msg { margin-top: 20px; padding: 13px 16px; border-radius: 11px; font-size: 14.5px;
+          background: var(--bg-2); border: 1px solid var(--line); }
+.pf-msg.ok  { border-color: var(--accent-d); color: var(--text); }
+.pf-msg.bad { border-color: #7a3b3b; color: #e8c4c4; }
+
+/* ------------------------------------------------------------- photo */
+.me { display: flex; align-items: center; gap: 18px; margin-top: 36px; }
+.me img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover;
+          border: 1px solid var(--line); display: block; flex: none; }
+.me b { display: block; font-size: 16px; letter-spacing: -.01em; }
+.me span { font-size: 14px; color: var(--dim); }
+
 /* ---------------------------------------------------------------------
    Grid and flex children default to min-width:auto, so one wide child (a
    1912px screenshot, a long email address) pushes its track past the
@@ -175,7 +214,8 @@ footer p { font-size: 13.5px; color: var(--dim); }
    shrink to fit.
    ------------------------------------------------------------------- */
 .stats > div, .cards > *, .shots > *, .funnel > *, .steps > *,
-.step > *, .rows > *, figure, header .wrap > * { min-width: 0; }
+.step > *, .rows > *, figure, header .wrap > *,
+.pf-grid > *, .pf-foot > *, .me > * { min-width: 0; }
 img { max-width: 100%; height: auto; }
 .rows span, .rows b, .rows em { overflow-wrap: anywhere; }
 .big-link { overflow-wrap: anywhere; max-width: 100%; }
