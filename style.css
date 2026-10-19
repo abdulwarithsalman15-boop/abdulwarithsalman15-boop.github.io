@@ -67,7 +67,7 @@ nav a:hover { color: var(--text); }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ------------------------------------------------------------- stats */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
          background: var(--line); border: 1px solid var(--line);
          border-radius: 14px; overflow: hidden; margin-top: 52px; }
 .stats div { background: var(--bg-2); padding: 22px 18px; }
