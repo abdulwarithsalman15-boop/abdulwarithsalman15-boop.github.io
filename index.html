@@ -379,8 +379,9 @@
     <form class="pform" id="planform">
       <div class="pf-grid">
         <label>Your website
-          <input type="url" name="website" required
-                 placeholder="https://yourcompany.com">
+          <input type="text" name="website" required
+                 inputmode="url" autocomplete="url" autocapitalize="off"
+                 spellcheck="false" placeholder="yourcompany.com">
         </label>
         <label>Where to send the plan
           <input type="email" name="email" required
@@ -459,10 +460,35 @@ var PLAN_ENDPOINT = "https://formspree.io/f/mbgdekzo";
     msg.hidden = false;
   }
 
+  /* type="url" rejects "yourcompany.com" because it has no scheme, which is
+     how most people type a domain. The field is plain text and normalised
+     here instead, so the primary call to action never turns someone away
+     over punctuation. */
+  var site_in = f.elements["website"];
+
+  function tidy_site() {
+    var v = site_in.value.trim().replace(/^@+/, "");
+    if (v && !/^https?:\/\//i.test(v)) v = "https://" + v.replace(/^\/+/, "");
+    return v;
+  }
+
+  site_in.addEventListener("blur", function () {
+    var v = tidy_site();
+    if (v) site_in.value = v;
+  });
+
   f.addEventListener("submit", function (e) {
     e.preventDefault();
+    var site = tidy_site();
+    if (!/^https?:\/\/[^\s.]+\.[^\s]{2,}$/i.test(site)) {
+      say("That does not look like a website address. Something like "
+          + "yourcompany.com is all I need.", false);
+      site_in.focus();
+      return;
+    }
+    site_in.value = site;
     var d = new FormData(f);
-    var site = d.get("website"), mail = d.get("email"), offer = d.get("offer");
+    var mail = d.get("email"), offer = d.get("offer");
 
     if (!PLAN_ENDPOINT) {
       window.location.href = "mailto:abdul@warithsalman.com"
