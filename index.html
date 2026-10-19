@@ -442,10 +442,10 @@
 
 <script>
 /* GitHub Pages serves static files only, so the submission has to POST to a
-   third party. Paste the Formspree form id below once the account exists.
-   Until it is set the button opens a prefilled email instead, so nothing is
-   silently dropped by a dead button. */
-var PLAN_ENDPOINT = "";   /* e.g. "https://formspree.io/f/abcdwxyz" */
+   third party. Formspree mails each submission to abdul@warithsalman.com.
+   If the endpoint is ever blanked the button falls back to a prefilled
+   email, so a submission is never silently dropped by a dead button. */
+var PLAN_ENDPOINT = "https://formspree.io/f/mbgdekzo";
 
 (function () {
   var f = document.getElementById("planform");
