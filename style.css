@@ -28,7 +28,8 @@ header {
 }
 header .wrap { height: 64px; display: flex; align-items: center;
                gap: 26px; overflow: hidden; }
-.logo { font-family: var(--mono); font-weight: 700; font-size: 15px; letter-spacing: -.02em; }
+.logo { font-family: var(--mono); font-weight: 700; font-size: 14px;
+        letter-spacing: -.02em; white-space: nowrap; }
 .logo span { color: var(--accent); }
 nav { margin-left: auto; display: flex; align-items: center; gap: 24px; }
 nav a { font-size: 14px; color: var(--dim); transition: color .18s; }
@@ -53,7 +54,7 @@ nav a:hover { color: var(--text); }
 }
 .marquee div { display: inline-flex; white-space: nowrap; animation: slide 24s linear infinite; }
 .marquee b {
-  font-size: clamp(52px, 12vw, 136px); font-weight: 800; letter-spacing: -.045em;
+  font-size: clamp(30px, 6.4vw, 86px); font-weight: 800; letter-spacing: -.04em;
   line-height: .95; padding-right: .18em;
 }
 .marquee b:nth-child(even) { color: transparent; -webkit-text-stroke: 1.5px var(--accent-d); }
